@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Autenticador</string>
+    <string name="txtLogin">Login:</string>
+    <string name="txtSenha">Senha:</string>
+    <string name="txtLogar">Entrar</string>
+    <string name="txtCadastrar">Cadastrar</string>
+    <string name="txtCadastrado">Cadastrado com sucesso!</string>
+</resources>
