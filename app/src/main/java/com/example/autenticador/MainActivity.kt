@@ -1,8 +1,13 @@
 package com.example.autenticador
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +18,45 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize Firebase Auth
-        auth = FirebaseAuth
+        auth = Firebase.auth
 
+        val txtCadastroUsuario: TextView = findViewById(R.id.txtCadastroUsuario)
+
+        txtCadastroUsario.setOnClickListener{
+            val intent = Intent(this, RegisterActivity::class.java)
+            starActivity(intent)
+        }
+
+        val btnLogar: Button = findViewById(R.id.btnLogar)
+
+        btnLogar.setOnClickListener{
+            performLogin()
+        }
+
+    }
+
+    private fun performLogin() {
+        val txtEmail: TextView = findViewById(R.id.txtLogin)
+        val txtSenha: TextView = findViewById(R.id.txtSenha)
+
+        if(txtEmail.text.isEmpty() || txtSenha.text.isEmpty()){
+            Toast.makeText(this, "Por Favor preencher os campos para efetuar o login!", Toast.LENGTH_SHORT)
+            return
+        }
+
+        val inputEmail = txtEmail.text.toString()
+        val inputSenha = txtSenha.text.toString()
+
+        auth.signInWithEmailAndPassword(inputEmail, inputSenha)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val intent = Intent(this, PrincipalActivity::class.java)
+                    starActivity(intent)
+
+                    Toast.makeText(this, "Autenticação realizada com sucesso!", Toast.LENGTH_SHORT)
+                } else {
+                    Toast.makeText(this, "Usuário e senha não conferem!", Toast.LENGTH_SHORT)
+                }
+            }
     }
 }

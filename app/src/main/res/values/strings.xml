@@ -5,4 +5,5 @@
     <string name="txtLogar">Entrar</string>
     <string name="txtCadastrar">Cadastrar</string>
     <string name="txtCadastrado">Cadastrado com sucesso!</string>
+    <string name="txtCadastroUsuario">Não tem conta? Crie uma!</string>
 </resources>

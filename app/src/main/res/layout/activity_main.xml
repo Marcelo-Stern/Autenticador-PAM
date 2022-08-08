@@ -43,4 +43,12 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/txtLogar"/>
 
+    <TextView
+        android:id="@+id/cadastroUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/txtCadastroUsuario"
+        android:textSize="250dp"/>
+
 </LinearLayout>
