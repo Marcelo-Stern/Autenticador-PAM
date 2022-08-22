@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,11 +21,11 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        val txtCadastroUsuario: TextView = findViewById(R.id.txtCadastroUsuario)
+        val txtcadastroUsuario: TextView = findViewById(R.id.cadastroUsuario)
 
-        txtCadastroUsario.setOnClickListener{
+        txtcadastroUsuario.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
-            starActivity(intent)
+            startActivity(intent)
         }
 
         val btnLogar: Button = findViewById(R.id.btnLogar)
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val intent = Intent(this, PrincipalActivity::class.java)
-                    starActivity(intent)
+                    startActivity(intent)
 
                     Toast.makeText(this, "Autenticação realizada com sucesso!", Toast.LENGTH_SHORT)
                 } else {

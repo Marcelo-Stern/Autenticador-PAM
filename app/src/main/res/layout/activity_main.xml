@@ -49,6 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/txtCadastroUsuario"
-        android:textSize="250dp"/>
+        android:textSize="25dp"/>
 
 </LinearLayout>

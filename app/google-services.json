@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305046622637",
+    "project_id": "autenticador-55c5a",
+    "storage_bucket": "autenticador-55c5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305046622637:android:4d33eab76fc4a7a49f1124",
+        "android_client_info": {
+          "package_name": "com.example.autenticador"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305046622637-38mbdehp2m2cu2rsp01vqtp8d454l9o4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb8hj82AD2jV3pT9Vsc7axNnDtF5F_A8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305046622637-38mbdehp2m2cu2rsp01vqtp8d454l9o4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
