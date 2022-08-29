@@ -6,4 +6,6 @@
     <string name="txtCadastrar">Cadastrar</string>
     <string name="txtCadastrado">Cadastrado com sucesso!</string>
     <string name="txtCadastroUsuario">Não tem conta? Crie uma!</string>
+    <string name="msgUsuarioLogado">Usuário logado com sucesso!</string>
+    <string name="btnDeslogar">Sair</string>
 </resources>
