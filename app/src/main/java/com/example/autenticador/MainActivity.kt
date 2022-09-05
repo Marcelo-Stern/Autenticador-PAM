@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -37,8 +38,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performLogin() {
-        val txtEmail: TextView = findViewById(R.id.txtLogin)
-        val txtSenha: TextView = findViewById(R.id.txtSenha)
+        val txtEmail: EditText = findViewById(R.id.edtLogin)
+        val txtSenha: EditText = findViewById(R.id.edtSenha)
 
         if(txtEmail.text.isEmpty() || txtSenha.text.isEmpty()){
             Toast.makeText(this, "Por Favor preencher os campos para efetuar o login!", Toast.LENGTH_SHORT).show()

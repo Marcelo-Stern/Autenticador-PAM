@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(inputEmail, inputSenha)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, PrincipalActivity::class.java)
                     startActivity(intent)
 
                     Toast.makeText(baseContext, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
